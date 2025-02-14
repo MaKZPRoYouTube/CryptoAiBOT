@@ -1,5 +1,5 @@
 import telebot
-bot = telebot.TeleBot("7673793405:AAEpBhN-vpmnZI8aEZY1AS-NTRb9Uq34xgs")
+bot = telebot.TeleBot(BOT_TOKEN)
 @bot.message_handler(content_types=['text'])
 def get_text_messages(message):
     if message.text == "/start":
