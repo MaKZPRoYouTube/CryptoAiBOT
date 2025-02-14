@@ -286,7 +286,7 @@ def get_text_messages(message):
             bot.send_message(message.from_user.id, model)
             
             bot.send_message(message.from_user.id, "Обучение модели...")
-            losses = train_model(model, train_loader, num_epochs=1000, learning_rate=0.0005, device=device)
+            losses = train_model(model, train_loader, num_epochs=200, learning_rate=0.001, device=device)
             
             plt.figure(figsize=(10, 5))
             plt.plot(losses, label='Train Loss')
@@ -337,6 +337,4 @@ def get_text_messages(message):
 
         if __name__ == '__main__':
             main()
-
-        bot.send_message(message.from_user.id, "Напиши привет")
 bot.polling(none_stop=True, interval=0)
