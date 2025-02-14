@@ -1,1 +1,1 @@
-
+logging ccxt pandas numpy ta requests datetime vaderSentiment scikit-learn torch matplotlib
