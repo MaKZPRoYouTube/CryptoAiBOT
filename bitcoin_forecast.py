@@ -1,4 +1,6 @@
 import telebot
+import os
+BOT_TOKEN = os.getenv('BOT_TOKEN')
 bot = telebot.TeleBot(BOT_TOKEN)
 @bot.message_handler(content_types=['text'])
 def get_text_messages(message):
